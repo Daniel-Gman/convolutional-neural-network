@@ -38,8 +38,8 @@ w_i_h = np.random.uniform(-0.5, 0.5, (20, 784))
 # Random weights close to 0
 # W for Weights being -0.5, 0.5
 # Number of Neurons in each layer:
-# 20 input
-# 784 hidden (Dataset images are 28 x 28 pixels. therefore 784)
+# 784 input (Dataset images are 28 x 28 pixels. therefore 784)
+# 20 hidden 
 # Weight matrix connecting weight layer to input layer and hidden layer : 20 by 784
 #
 #_______________________________________________________________________________________________________________________
