@@ -1,0 +1,100 @@
+digraph NeuralNetwork {
+    rankdir = LR;
+    // Left to right layout
+    
+    // Input Layer (784 neurons)
+    subgraph cluster_input {
+        label = "Input Layer";
+        color = blue;
+        node [shape = circle; style = filled; color = lightblue;];
+        input0 [label = "...";];
+        input1 [label = "Input 783";];
+        input2 [label = "Input 0";];
+        input783 [label = "Input 1";];
+    }
+    
+    // IM REALLY SORRY FOR THE CLASS name NOT BEING ALIGNED WITH THE LABEL NAME
+    // THIS IS MY FIRST TIME WORKING WITH .DOT AND Graphviz SO COULDNT GET THE INPUTS
+    // TO GO IN THE ORDER I WANTED :(
+    // NOTE TO SELF: LEARN .DOT
+    
+    subgraph bias {
+        label = "Bias Layer";
+        color = "#950098";
+        node [shape = circle; style = filled; color = "#fb1cff";];
+        bias [label = "b_i_h (1)";];
+    }
+    
+    // Hidden Layer (20 neurons)
+    subgraph cluster_hidden {
+        label = "Hidden Layer (Sigmoid Activation)";
+        color = green;
+        node [shape = circle; style = filled; color = lightgreen;];
+        hidden0 [label = "Hidden 0";];
+        hidden1 [label = "Hidden 1";];
+        hidden2 [label = "...";];
+        hidden19 [label = "Hidden 19";];
+    }
+    
+    subgraph bias2 {
+        label = "Bias2 Layer";
+        color = "#950098";
+        node [shape = circle; style = filled; color = "#fb1cff";];
+        bias2 [label = "b_h_o (1)";];
+    }
+    
+    // Output Layer (10 neurons)
+    subgraph cluster_output {
+        label = "Output Layer (Sigmoid Activation)";
+        color = red;
+        node [shape = circle; style = filled; color = lightcoral;];
+        output0 [label = "Output 0";];
+        output1 [label = "Output 1";];
+        output2 [label = "...";];
+        output9 [label = "Output 9";];
+    }
+    
+    // Fully connect Input Layer to Hidden Layer
+    input0 -> hidden0;
+    input0 -> hidden1;
+    input0 -> hidden2;
+    input0 -> hidden19;
+    input1 -> hidden0;
+    input1 -> hidden1;
+    input1 -> hidden2;
+    input1 -> hidden19;
+    input2 -> hidden0;
+    input2 -> hidden1;
+    input2 -> hidden2;
+    input2 -> hidden19;
+    input783 -> hidden0;
+    input783 -> hidden1;
+    input783 -> hidden2;
+    input783 -> hidden19;
+    bias -> hidden0;
+    bias -> hidden1;
+    bias -> hidden2;
+    bias -> hidden19;
+    
+    // Fully connect Hidden Layer to Output Layer
+    hidden0 -> output0;
+    hidden0 -> output1;
+    hidden0 -> output9;
+    hidden0 -> output2;
+    hidden1 -> output0;
+    hidden1 -> output1;
+    hidden1 -> output9;
+    hidden1 -> output2;
+    hidden2 -> output0;
+    hidden2 -> output1;
+    hidden2 -> output9;
+    hidden2 -> output2;
+    hidden19 -> output0;
+    hidden19 -> output1;
+    hidden19 -> output9;
+    hidden19 -> output2;
+    bias2 -> output0;
+    bias2 -> output1;
+    bias2 -> output2;
+    bias2 -> output9;
+}
