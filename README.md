@@ -39,7 +39,7 @@ My learning journey does not stop with understanding this CNN model. I have set 
 
 ## 🖼️ **Model Architecture**
 
-![CNN Architecture](image-2.png)
+![image](https://github.com/user-attachments/assets/754689f0-4808-45f9-9537-e49836caa1b6)
 
 The diagram above represents the CNN architecture used in the model. The architecture consists of:
 
